@@ -1,0 +1,1199 @@
+
+
+Skip to content
+Using Gmail with screen readers
+1 of 1
+credentials
+Inbox
+AI Overview
+Sent credentials for AWS, Git, Gmail, and Docker, alongside lab experiment instructions covering software installation, Git commands, Maven, and Docker CLI.
+By Gemini; there may be mistakes. Learn more
+
+AKSHADHA THAMMANDRA <akshadhacoockie@gmail.com>
+7:47 AM (1 hour ago)
+to me, kmitakshadha@gmail.com
+
+kmitakshadha@gmail.com
+Kmit123$
+
+aws-
+akshadhathammandra@gmail.com
+password-Kmit123$
+
+git -kmitakshadhagmail
+kmitselabakshadha
+git pw-akshadhathammandra@123
+
+gmail
+athammandra@gmail.com
+Kmit123$
+
+docker-kmitakshadhagmail
+kmitaksh
+Kmit@123$
+
+kmitselabaksh
+git pw-Kmit123$
+
+Kmit123$aksh git for athammandra@gmail.com
+
+============================================================
+EXPERIMENT 1 - SOFTWARE INSTALLATION AND SRS DOCUMENT
+============================================================
+Sub-exercises: Abstract, Functional Requirements, Non-Functional Requirements, User Identification, User Workflows, Use Cases.
+
+No terminal commands are required.
+1. Install the software/tools required for your project.
+2. Create an SRS document.
+3. Add project abstract.
+4. List each Functional Requirement separately.
+5. List Non-Functional Requirements such as reliability, security, performance and usability.
+6. Identify every user/actor/role.
+7. Write the workflow steps for each user.
+8. List actors and their use cases.
+9. Save the SRS and take screenshots if required.
+
+============================================================
+EXPERIMENT 2 - GIT LOCAL AND REMOTE COMMANDS
+============================================================
+SUB-EXERCISE 1 - PUSH MULTI-FOLDER PROJECT TO PRIVATE GITHUB REPOSITORY
+1. GitHub -> New repository -> enter name -> select Private -> Create repository.
+2. Open Git Bash in the project root.
+
+cd /path/to/project
+git init
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git remote add origin https://github.com/username/repository.git
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git push -u origin main
+
+SUB-EXERCISE 2 - ALL LOCAL AND REMOTE GIT COMMANDS
+Version and configuration
+git --version
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git config --list
+
+Repository commands
+git init
+git clone https://github.com/username/repository.git
+cd repository
+git remote -v
+git remote add origin https://github.com/username/repository.git
+git remote remove origin
+git remote rename origin upstream
+git remote set-url origin https://github.com/username/new-repository.git
+git remote show origin
+
+Stage, commit and status
+git status
+git add filename.txt
+git add .
+git commit -m "Commit message"
+git restore filename.txt
+git restore --staged filename.txt
+git reset filename.txt
+git reset --hard HEAD
+git revert COMMIT_ID
+git commit --amend -m "Correct message"
+
+Branch and merge
+git branch
+git branch -a
+git branch branch-name
+git switch branch-name
+git switch -c new-branch
+git checkout branch-name
+git checkout -b new-branch
+git branch -d branch-name
+git branch -D branch-name
+git branch --merged
+git branch -d branch1 branch2 branch3
+git switch main
+git merge branch-name
+git fetch origin
+git rebase origin/main
+
+Remote operations
+git push origin main
+git push -u origin main
+git pull origin main
+git fetch origin
+git fetch --all
+git fetch origin feature-branch
+git branch -r
+git fetch --prune
+git remote prune origin
+git push -u origin feature-branch
+
+History and differences
+git log
+git log --oneline
+git diff
+git show COMMIT_ID
+git reflog
+git blame filename
+ git blame -L 25,25 script.py
+
+Stash and conflict resolution
+git stash
+git stash apply
+git stash pop
+git status
+Open the conflicted file, choose/combine the required lines and delete conflict markers.
+git add filename
+git commit -m "Resolve merge conflict"
+git merge --abort
+git rebase --continue
+
+Git ignore
+Create a file named .gitignore in project root.
+Add these patterns inside it:
+*.log
+node_modules/
+target/
+secret_file.txt
+temp/
+
+Remove sensitive file from history (only when required)
+git filter-repo --path api-key.txt --invert-paths
+git push --force origin main
+
+SUB-EXERCISE 3 - BASIC GIT SCENARIO COMMANDS
+Discard unstaged file changes:
+git restore app.js
+Unstage a file:
+git restore --staged app.js
+Correct last commit message:
+git commit --amend -m "Updated message"
+Readable commit history:
+git log --oneline
+Set global username and email:
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+View unstaged changes:
+git diff
+Switch branch:
+git switch feature/login
+Recover deleted branch:
+git reflog
+git branch feature-ui COMMIT_ID
+Push local commits:
+git push origin main
+Fetch without merging:
+git fetch origin
+Create and switch branch:
+git switch -c search-filter
+Remove sensitive file history:
+git filter-repo --path api-key.txt --invert-paths
+List local and remote branches:
+git branch -a
+Merge feature into main:
+git switch main
+git merge feature/signup
+Resolve conflict:
+Edit conflicted file, remove markers, then:
+git add app.js
+git commit
+Ignore logs and node_modules: add *.log and node_modules/ to .gitignore.
+Find line author:
+git blame -L 25,25 script.py
+Save temporary changes:
+git stash
+Restore latest stash:
+git stash pop
+Delete branch safely:
+git branch -d feature/test
+Force-delete unmerged branch:
+git branch -D feature-experiment
+Check merged branches:
+git branch --merged
+Delete several merged branches:
+git branch -d feature-a feature-b feature-c
+
+SUB-EXERCISE 4 - REMOTE REPOSITORY SCENARIOS
+git clone https://github.com/username/repository.git
+git remote -v
+git remote add origin https://github.com/username/repository.git
+git remote remove origin
+git remote rename origin upstream
+git fetch origin
+git pull origin main
+git push origin main
+git push -u origin main
+git remote set-url origin https://github.com/username/new-repository.git
+git branch -r
+git fetch --prune
+git fetch origin feature/login
+git remote show origin
+git fetch origin
+git rebase origin/main
+
+Additional remote scenarios
+git pull --rebase origin main
+git push origin main
+git push -u origin feature
+git fetch --all
+git branch -r
+git stash
+git pull --rebase origin main
+git stash pop
+git filter-repo --path api-key.txt --invert-paths
+git push --force origin main
+git switch feature-branch
+git fetch origin
+git merge origin/main
+
+============================================================
+EXPERIMENT 3 - COLLABORATIVE CODING USING GIT
+============================================================
+SUB-EXERCISE 1 - CREATE GITHUB ORGANIZATION
+1. GitHub -> New organization -> Create free organization.
+2. Enter organization name and email.
+3. Add collaborator/member and send invitation.
+4. Collaborator accepts invitation.
+5. Organization Settings -> Member privileges -> Base permissions -> Write.
+6. Create a repository inside the organization.
+
+SUB-EXERCISE 2 - SHARED REPOSITORY COLLABORATION
+Owner: Repository -> Settings -> Collaborators -> Add people -> select collaborator -> send invite.
+Collaborator accepts invitation.
+
+Collaborator terminal commands:
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git clone https://github.com/username/repository-name.git
+cd repository-name
+git checkout -b feature/your-feature
+git add .
+git commit -m "Add feature"
+git push origin feature/your-feature
+
+Owner updates main branch:
+git checkout main
+git pull origin main
+
+Collaborator updates feature branch:
+git checkout feature/your-feature
+git merge main
+
+SUB-EXERCISE 3 - FORK AND PULL REQUEST
+1. Open original public repository on GitHub.
+2. Click Fork -> Create fork.
+3. Clone your fork:
+git clone https://github.com/your-username/repository.git
+cd repository
+git add .
+git commit -m "My contribution"
+git push origin main
+4. GitHub -> Contribute -> Open pull request -> Create pull request.
+5. Original owner opens Pull requests -> Review changes -> Submit review -> Merge pull request -> Confirm merge.
+6. Update local repository:
+git checkout main
+git pull origin main
+
+SUB-EXERCISE 4 - RESOLVE MERGE CONFLICT
+On collaborator branch:
+git add .
+git commit -m "Collaborator change"
+git push origin feature-branch
+On other collaborator branch:
+git pull origin feature-branch
+Open conflicted file, choose/combine changes and remove conflict markers.
+git status
+git add filename
+git commit -m "Resolve conflict"
+git push origin feature-branch
+To cancel merge:
+git merge --abort
+
+SUB-EXERCISE 5 - CREATE AND APPLY PATCH
+Clone project and edit a file:
+git clone https://github.com/username/repository.git
+cd repository
+git add .
+git commit -m "Patch changes"
+git log --oneline
+git format-patch -1 COMMIT_ID
+To create patch for last 3 commits:
+git format-patch -3
+Send the generated .patch file to repository owner.
+Owner applies patch:
+git am 0001-commit-message.patch
+Alternative:
+git apply my-changes.patch
+git status
+git add .
+git commit -m "Apply patch"
+
+SUB-EXERCISE 6 - REMOTE SCENARIOS
+git pull --rebase origin main
+git push origin main
+git push -u origin feature
+git fetch --all
+git branch -r
+git stash
+git pull --rebase origin main
+git stash pop
+git filter-repo --path api-key.txt --invert-paths
+git push --force origin main
+git switch feature-branch
+git fetch origin
+git merge origin/main
+
+============================================================
+EXPERIMENT 4 - MAVEN JAVA AND WEB APPLICATIONS
+============================================================
+SUB-EXERCISE 1 - CREATE MAVEN JAVA PROJECT
+1. Eclipse -> File -> New -> Project -> Maven -> Maven Project.
+2. Select workspace -> Next.
+3. Select maven-archetype-quickstart -> Next.
+4. Enter Group ID com.example and Artifact ID my-maven-project -> Finish.
+5. Right-click project -> Maven -> Update Project.
+6. Add Java code under src/main/java and tests under src/test/java.
+
+SUB-EXERCISE 2 - BUILD, TEST AND INSTALL
+Open terminal in project folder:
+mvn test
+mvn clean install
+mvn package
+
+Eclipse: Right-click project -> Run As -> Maven clean; Maven install; Maven test; Maven build. Enter goals clean install test.
+
+SUB-EXERCISE 3 - ADD DEPENDENCY
+Add dependency inside pom.xml <dependencies>:
+<dependency>
+<groupId>com.google.code.gson</groupId>
+<artifactId>gson</artifactId>
+<version>2.10</version>
+</dependency>
+Run:
+mvn clean install
+
+SUB-EXERCISE 4 - CONFIGURE JAVA COMPILER
+Add maven-compiler-plugin in pom.xml with source and target 17, version 3.11.0.
+Run:
+mvn package
+jar tf target/myapp.jar
+
+SUB-EXERCISE 5 - JUNIT TESTING AND REPORTS
+Create test class under src/test/java.
+Run:
+mvn test
+Check target/test-classes and target/surefire-reports.
+
+SUB-EXERCISE 6 - FIX POM/DEPENDENCY ERRORS
+mvn clean install
+mvn -U clean install
+mvn -X clean install
+Check dependency coordinates and versions in pom.xml, correct them and rebuild.
+mvn dependency:tree
+
+SUB-EXERCISE 7 - RESOURCE FILES
+Create src/main/resources/config.properties.
+Run:
+mvn clean package
+Check target/classes/config.properties.
+
+SUB-EXERCISE 8 - PARENT AND MULTI-MODULE PROJECT
+Create parent folder with parent pom.xml, core/pom.xml and web/pom.xml.
+Parent pom must use packaging pom and list modules core and web.
+Run from parent folder:
+mvn clean install
+mvn -pl core install
+mvn -pl web package
+
+SUB-EXERCISE 9 - EXECUTABLE JAR
+Add maven-jar-plugin to pom.xml and set Main-Class to com.example.Main.
+Run:
+mvn clean package
+java -jar target/myapp.jar
+
+SUB-EXERCISE 10 - BUILD WAR AND DEPLOY TO TOMCAT
+Set packaging to war in pom.xml.
+Keep web files under src/main/webapp and web.xml under WEB-INF.
+Run:
+mvn clean package
+Copy target/mywebapp.war to Tomcat webapps folder.
+Start Tomcat and open http://localhost:8080/mywebapp
+
+SUB-EXERCISE 11 - MAVEN WEB PROJECT
+Eclipse -> File -> New -> Project -> Maven -> Maven Project -> select maven-archetype-webapp.
+Enter Group ID and Artifact ID -> Finish.
+Add Servlet/JSP dependency in pom.xml from mvnrepository.com.
+Eclipse -> Window -> Show View -> Servers -> Add Server -> Tomcat.
+Right-click project -> Run As -> Maven clean, Maven install, Maven test, Maven build.
+Run on Server -> select Tomcat -> Finish.
+Push both Maven Java and Maven Web projects to GitHub:
+git init
+git add .
+git commit -m "Add Maven project"
+git branch -M main
+git remote add origin https://github.com/username/repository.git
+git push -u origin main
+
+SUB-EXERCISE 12 - SCENARIO COMMANDS
+mvn clean install
+mvn -X clean install
+mvn dependency:tree
+mvn -U clean install
+mvn test
+mvn package
+mvn -pl core install
+mvn -pl web package
+java -jar target/myapp.jar
+
+============================================================
+EXPERIMENT 5 - DOCKER CLI COMMANDS
+============================================================
+SUB-EXERCISE 1 - PULL, RUN, ACCESS, STOP, START AND REMOVE REDIS
+
+docker pull redis
+docker run --name my-redis -d redis
+docker ps
+docker exec -it my-redis redis-cli
+SET name "Alice"
+GET name
+exit
+docker stop my-redis
+docker start my-redis
+docker stop my-redis
+docker rm my-redis
+docker rmi redis
+
+SUB-EXERCISE 2 - CONTAINER AND IMAGE MANAGEMENT
+docker ps
+docker ps -a
+docker images
+docker inspect CONTAINER_NAME
+docker logs CONTAINER_NAME
+docker stats
+docker top CONTAINER_NAME
+docker start CONTAINER_NAME
+docker stop CONTAINER_NAME
+docker restart CONTAINER_NAME
+docker rm CONTAINER_NAME
+docker rmi IMAGE_NAME
+
+SUB-EXERCISE 3 - NETWORKS
+docker network ls
+docker network create my-network
+docker run -d --name c1 --network my-network nginx
+docker network inspect my-network
+docker network connect my-network CONTAINER_NAME
+docker network disconnect my-network CONTAINER_NAME
+docker network rm my-network
+
+SUB-EXERCISE 4 - PERSISTENT VOLUMES
+docker volume ls
+docker volume create my-volume
+docker run -d --name volume-demo -v my-volume:/data nginx
+docker volume inspect my-volume
+docker stop volume-demo
+docker rm volume-demo
+docker volume rm my-volume
+
+SUB-EXERCISE 5 - DOCKER CLI SCENARIO COMMANDS
+Check running containers:
+docker ps
+Stop web_app:
+docker stop web_app
+Build image:
+docker build -t myapi .
+Expose container port 5000 on host 8080:
+docker run -d --name web_app -p 8080:5000 myapi
+Enter container shell:
+docker exec -it web_app sh
+Delete image:
+docker rmi old_api
+View logs:
+docker logs web_app
+Run in background:
+docker run -d IMAGE_NAME
+Check port mappings:
+docker ps
+Tag image:
+docker tag IMAGE_NAME username/IMAGE_NAME:latest
+Export image:
+docker save -o image.tar IMAGE_NAME
+Auto-restart container:
+docker run -d --restart unless-stopped IMAGE_NAME
+View CPU and RAM:
+docker stats
+Limit memory:
+docker run -d --memory="512m" IMAGE_NAME
+Run command before app: add RUN command in Dockerfile for build-time command or ENTRYPOINT/CMD for startup command.
+Custom Nginx image: create Dockerfile with FROM nginx:latest and COPY ./html /usr/share/nginx/html, then:
+docker build -t my-nginx .
+docker run -d -p 8080:80 my-nginx
+
+============================================================
+EXPERIMENT 6 - DOCKERFILE AND DOCKER HUB
+============================================================
+SUB-EXERCISE 1 - CREATE REDIS DOCKERFILE
+mkdir Redis
+cd Redis
+Create a file named Dockerfile (no extension) containing:
+FROM redis:latest
+CMD ["redis-server"]
+
+SUB-EXERCISE 2 - BUILD AND RUN IMAGE
+docker build -t redisnew .
+docker run --name myredisnew -d redisnew
+docker ps
+docker stop myredisnew
+
+SUB-EXERCISE 3 - LOGIN AND PUSH IMAGE TO DOCKER HUB
+docker login
+docker ps -a
+docker commit CONTAINER_ID username/redis1
+docker images
+docker push username/redis1
+
+SUB-EXERCISE 4 - REMOVE, PULL AND RUN ON ANOTHER SYSTEM
+docker rm CONTAINER_ID
+docker rmi username/redis1
+docker logout
+docker pull username/redis1
+docker run --name myredis -d username/redis1
+docker exec -it myredis redis-cli
+SET name "Abcdef"
+GET name
+exit
+docker ps -a
+docker stop myredis
+docker rm myredis
+docker images
+docker rmi username/redis1
+
+SUB-EXERCISE 5 - DOCKER SCENARIOS
+docker ps
+docker stop web_app
+docker build -t myapi .
+docker run -d --name web_app -p 8080:5000 myapi
+docker exec -it web_app sh
+docker rmi old_api
+docker logs web_app
+docker run -d IMAGE_NAME
+docker ps
+docker tag IMAGE_NAME username/IMAGE_NAME:latest
+docker save -o image.tar IMAGE_NAME
+docker run -d --restart unless-stopped IMAGE_NAME
+docker stats
+docker run -d --memory=512m IMAGE_NAME
+For custom Nginx image, Dockerfile:
+FROM nginx:latest
+COPY ./html /usr/share/nginx/html
+Then:
+docker build -t custom-nginx .
+docker run -d -p 8080:80 custom-nginx
+
+============================================================
+EXPERIMENT 7 - DOCKER COMPOSE MULTI-CONTAINERIZATION
+============================================================
+SUB-EXERCISE 1 - NGINX AND POSTGRES
+mkdir compose-lab
+cd compose-lab
+Create docker-compose.yml with services web (nginx:latest, port 8080:80) and db (postgres:15, POSTGRES_USER=demo, POSTGRES_PASSWORD=demo, POSTGRES_DB=demo_db).
+Run:
+docker compose up -d
+docker compose ps
+Open http://localhost:8080
+
+SUB-EXERCISE 2 - ADD REDIS AND DEPENDS_ON
+Add service:
+redis:
+  image: redis:alpine
+Add depends_on redis under web service.
+Run:
+docker compose up -d
+docker compose ps
+
+docker compose logs
+docker compose down
+
+SUB-EXERCISE 3 - DEPLOY ON ANOTHER MACHINE
+Zip compose-lab folder and transfer it to another machine with Docker installed.
+On that machine:
+docker compose up -d
+docker compose ps
+
+SUB-EXERCISE 4 - NETWORK AND PERSISTENT VOLUME
+Add app-net under networks and db-data under volumes.
+Connect web and db to app-net.
+Mount db-data:/var/lib/postgresql/data in db.
+Run:
+docker compose up -d
+docker compose ps
+docker compose down
+docker compose up -d
+
+SUB-EXERCISE 5 - FLASK APP WITH DOCKER COMPOSE
+Create app.py with Flask route returning Hello from Flask + Docker.
+Create Dockerfile:
+FROM python:3.10-slim
+WORKDIR /app
+COPY app.py /app/
+RUN pip install flask
+CMD ["python", "app.py"]
+Set web service in compose file to build: ., ports 5000:5000, depends_on db.
+Run:
+docker compose up --build
+Open http://localhost:5000
+After editing app.py:
+docker compose up --build
+
+SUB-EXERCISE 6 - COMPOSE SCENARIOS
+Run frontend/backend/database together:
+docker compose up -d
+List services and port mappings:
+docker compose ps
+View logs:
+docker compose logs
+Restart all services:
+docker compose restart
+Rebuild only frontend:
+docker compose build frontend
+docker compose up -d --no-deps frontend
+Stop and remove all services:
+docker compose down
+If two containers need same host port, change one host-side port mapping, e.g. 8081:8080.
+Check port owner:
+docker ps
+Stop/remove Tomcat container and image:
+docker stop tomcat
+docker rm tomcat
+docker rmi tomcat
+Share image:
+docker login
+docker tag IMAGE username/IMAGE:latest
+docker push username/IMAGE:latest
+
+============================================================
+EXPERIMENT 8 - JENKINS FREESTYLE AUTOMATION USING MAVEN
+============================================================
+SUB-EXERCISE 1 - MAVEN JAVA BUILD JOB
+1. Open Jenkins at http://localhost:8080.
+2. New Item -> MavenJava_Build -> Freestyle project -> OK.
+3. Source Code Management -> Git -> enter Maven Java GitHub URL and branch */main or */master.
+4. Build Steps -> Invoke top-level Maven targets -> Maven installation MAVEN_HOME -> Goals clean.
+5. Add another Maven build step -> Goals install.
+6. Post-build Actions -> Archive artifacts -> **/*.
+7. Add Build other projects -> MavenJava_Test -> only if build is stable.
+8. Save -> Build Now -> Console Output.
+
+SUB-EXERCISE 2 - MAVEN JAVA TEST JOB
+1. New Item -> MavenJava_Test -> Freestyle project.
+2. Build Environment -> Delete workspace before build starts.
+3. Build Step -> Copy artifacts from another project -> MavenJava_Build -> Stable build only -> **/*.
+4. Add Maven target -> MAVEN_HOME -> test.
+5. Post-build -> Archive artifacts -> **/*.
+6. Save.
+
+SUB-EXERCISE 3 - JAVA PIPELINE VIEW
+1. Dashboard -> plus sign beside All -> name MavenJava_Pipeline.
+2. Select Build Pipeline View -> Create.
+3. Layout based on upstream/downstream relationship.
+4. Initial job MavenJava_Build -> Apply and Save.
+5. Run pipeline and inspect Console Output for both jobs.
+
+SUB-EXERCISE 4 - MAVEN WEB BUILD JOB
+1. New Item -> MavenWeb_Build -> Freestyle project.
+2. SCM -> Git -> Maven Web repository URL -> branch */main or */master.
+3. Add Maven target clean.
+4. Add Maven target install.
+5. Post-build -> Archive artifacts **/*.
+6. Build other projects -> MavenWeb_Test -> only if stable.
+7. Save.
+
+SUB-EXERCISE 5 - MAVEN WEB TEST JOB
+1. New Item -> MavenWeb_Test -> Freestyle project.
+2. Build Environment -> Delete workspace before build starts.
+3. Copy artifacts from MavenWeb_Build -> Stable build only -> **/*.
+4. Maven target test.
+5. Archive artifacts **/*.
+6. Build other projects -> MavenWeb_Deploy.
+7. Save.
+
+SUB-EXERCISE 6 - MAVEN WEB DEPLOY JOB
+1. New Item -> MavenWeb_Deploy -> Freestyle project.
+2. Delete workspace before build starts.
+3. Copy artifacts from MavenWeb_Test -> Stable build only -> **/*.
+4. Post-build -> Deploy WAR/EAR to container.
+5. WAR/EAR file **/*.war; context path Webpath.
+6. Add Tomcat 9 remote container, enter configured Tomcat credentials and server URL.
+7. Save.
+
+SUB-EXERCISE 7 - WEB PIPELINE VIEW AND RUN
+Dashboard -> plus sign -> MavenWeb_Pipeline -> Build Pipeline View.
+Set layout based on upstream/downstream and initial job MavenWeb_Build.
+Save -> Run -> inspect console -> open Tomcat manager -> open /webpath.
+
+SUB-EXERCISE 8 - JENKINS PLUGIN INSTALLATION
+Manage Jenkins -> Plugins -> Available Plugins -> search plugin -> Install.
+Install Git, Maven Integration, Pipeline, Build Pipeline and Deploy to container plugins as needed.
+Restart Jenkins if requested.
+
+============================================================
+EXPERIMENT 9 - JENKINS PIPELINE SCRIPT AND BUILD TRIGGERS
+============================================================
+SUB-EXERCISE 1 - CREATE SCRIPTED/DECLARATIVE PIPELINE
+1. Jenkins -> New Item -> enter pipeline name -> Pipeline -> OK.
+2. Configure -> Pipeline -> Definition: Pipeline script.
+3. Paste and edit the pipeline below. Set Maven tool name exactly as configured in Jenkins Global Tool Configuration.
+
+pipeline {
+    agent any
+    tools {
+        maven 'MAVEN-HOME'
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                git url: 'https://github.com/username/repository.git', branch: 'main'
+            }
+        }
+        stage('Clean') {
+            steps {
+                bat 'mvn clean'
+            }
+        }
+        stage('Compile') {
+            steps {
+                bat 'mvn compile'
+            }
+        }
+        stage('Test') {
+            steps {
+                bat 'mvn test'
+            }
+        }
+        stage('Package') {
+            steps {
+                bat 'mvn package'
+            }
+        }
+    }
+}
+
+For Linux Jenkins replace bat with sh, for example sh 'mvn clean'.
+Save -> Build Now -> Console Output.
+
+SUB-EXERCISE 2 - BUILD TRIGGERS
+1. Open job -> Configure -> Build Triggers.
+2. Choose required trigger:
+GitHub hook trigger for GITScm polling.
+Poll SCM schedule: H/5 * * * *
+Build periodically at 6 PM: 0 18 * * *
+3. Save.
+
+SUB-EXERCISE 3 - PIPELINE SCENARIO CHANGES
+Clean workspace stage:
+stage('Clean Workspace') { steps { deleteDir() } }
+Compile Java file:
+stage('Compile') { steps { bat 'javac Hello.java' } }
+Run tests:
+stage('Test') { steps { bat 'mvn test' } }
+Package project:
+stage('Package') { steps { bat 'mvn package' } }
+Print build number:
+echo "Build Number: ${BUILD_NUMBER}"
+Add deployment as a Deploy stage after Package.
+Use checkout stage before build to get latest GitHub code.
+Use Jenkins Credentials Manager for private repository credentials; never hardcode tokens.
+Use tools { maven 'MAVEN-HOME' } with the exact configured Maven tool name.
+If clone fails, checkout stage fails and later stages stop.
+If test/install fails, pipeline normally stops at failed stage.
+If project directory changes, update every Maven command's -f path.
+
+============================================================
+EXPERIMENT 10 - MINIKUBE, NGINX, NAGIOS AND AWS ACCOUNT
+============================================================
+SUB-EXERCISE 1 - INSTALL AND START MINIKUBE
+PowerShell as Administrator:
+curl.exe -LO https://storage.googleapis.com/minikube/releases/latest/minikube-installer.exe
+Start-Process .\minikube-installer.exe
+minikube start --driver=docker
+minikube status
+minikube version
+minikube kubectl -- get pods -A
+minikube dashboard
+minikube logs
+minikube update-check
+
+SUB-EXERCISE 2 - CREATE AND RUN NGINX DEPLOYMENT
+minikube start
+kubectl create deployment mynginx --image=nginx
+kubectl get deployments
+kubectl get pods
+kubectl describe pods
+kubectl set image deployment/mynginx nginx=nginx:latest
+
+SUB-EXERCISE 3 - EXPOSE NGINX ON SPECIFIED PORT
+kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
+kubectl get services
+kubectl get service mynginx
+kubectl port-forward svc/mynginx 8081:80
+Open http://localhost:8081
+Alternative:
+minikube tunnel
+minikube service mynginx --url
+
+SUB-EXERCISE 4 - SCALE PODS
+kubectl scale deployment mynginx --replicas=4
+kubectl get pods
+kubectl get service mynginx
+
+SUB-EXERCISE 5 - STOP AND CLEAN MINIKUBE
+kubectl delete deployment mynginx
+kubectl delete service mynginx
+minikube stop
+minikube delete
+
+SUB-EXERCISE 6 - RUN NAGIOS USING DOCKER
+docker pull jasonrivers/nagios:latest
+docker run --name nagiosdemo -p 8888:80 jasonrivers/nagios:latest
+Open http://localhost:8888
+Username nagiosadmin
+Password nagios
+Explore Hosts, Services and Alerts.
+docker ps
+docker logs nagiosdemo
+docker logs -f nagiosdemo
+docker stop nagiosdemo
+docker start nagiosdemo
+docker rm nagiosdemo
+docker images
+docker rmi jasonrivers/nagios:latest
+
+SUB-EXERCISE 7 - AWS FREE TIER ACCOUNT CREATION
+1. Open https://aws.amazon.com -> Create AWS Account.
+2. Enter email and account name -> verify email code.
+3. Enter contact details and accept terms.
+4. Add billing details and complete phone verification.
+5. Select Basic support plan -> Complete sign up.
+6. Open AWS Management Console and sign in as Root user.
+7. Select Academic/Researcher role and DevOps interest if prompted.
+
+SUB-EXERCISE 8 - KUBERNETES AND NAGIOS TROUBLESHOOTING COMMANDS
+kubectl describe pod POD_NAME
+kubectl logs POD_NAME
+kubectl get deployments
+kubectl describe deployment DEPLOYMENT_NAME
+kubectl get pods
+kubectl rollout history deployment/mynginx
+kubectl rollout undo deployment/mynginx
+kubectl exec -it POD_NAME -- /bin/bash
+kubectl top pod
+kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
+docker start nagiosdemo
+docker stop nagiosdemo
+docker ps
+docker logs -f nagiosdemo
+
+============================================================
+EXPERIMENT 11 - JENKINS CI/CD WEBHOOK AND EMAIL NOTIFICATION
+============================================================
+SUB-EXERCISE 1 - INSTALL AND CONFIGURE NGROK
+1. Download ngrok from https://ngrok.com/download.
+2. Extract and open terminal in ngrok folder.
+3. Add your own auth token:
+ngrok config add-authtoken YOUR_NGROK_TOKEN
+4. Start tunnel to Jenkins port (use your actual Jenkins port):
+ngrok http 8080
+5. Copy generated HTTPS forwarding URL.
+
+SUB-EXERCISE 2 - CREATE GITHUB WEBHOOK
+1. GitHub repository -> Settings -> Webhooks -> Add webhook.
+2. Payload URL: https://YOUR-NGROK-URL/github-webhook/
+3. Content type: application/json.
+4. Select Just the push event -> Add webhook.
+
+SUB-EXERCISE 3 - CONFIGURE JENKINS WEBHOOK TRIGGER
+1. Jenkins -> select job -> Configure.
+2. Build Triggers -> check GitHub hook trigger for GITScm polling.
+3. Save.
+4. Make a code change and push:
+git add .
+git commit -m "Webhook test"
+git push origin main
+5. Check Jenkins build history and Console Output.
+
+SUB-EXERCISE 4 - CREATE GMAIL APP PASSWORD
+1. Open https://myaccount.google.com.
+2. Security -> enable 2-Step Verification.
+3. Security -> App passwords -> create app password named Jenkins-Demo.
+4. Copy app password and keep it private.
+
+SUB-EXERCISE 5 - INSTALL EMAIL EXTENSION PLUGIN
+Jenkins -> Manage Jenkins -> Plugins -> Available Plugins -> Email Extension Plugin -> Install.
+
+SUB-EXERCISE 6 - CONFIGURE GLOBAL EMAIL SETTINGS
+Jenkins -> Manage Jenkins -> Configure System.
+E-mail Notification:
+SMTP server smtp.gmail.com
+SMTP authentication enabled
+Username your Gmail address
+Password your Gmail app password
+Use SSL enabled
+SMTP port 465
+Reply-To your Gmail address
+Send test email to verify.
+Extended E-mail Notification:
+SMTP server smtp.gmail.com
+SMTP port 465
+Use SSL enabled
+Add Gmail credentials in Jenkins Credentials.
+Set default content type and recipients if required.
+
+SUB-EXERCISE 7 - CONFIGURE EMAIL FOR A JOB
+Jenkins -> job -> Configure -> Post-build Actions -> Editable Email Notification.
+Enter Project Recipient List.
+Select content type text/plain or text/html.
+Select triggers such as Success and Failure.
+Save and run job to test.
+
+SUB-EXERCISE 8 - PROJECT DIAGRAMS
+Create and include Sequence Diagram, Class Diagram and Component Diagram for your project using the diagram tool required by your faculty.
+Take screenshots of webhook, successful triggered build, email configuration and received test email.
+
+============================================================
+EXPERIMENT 12 - UBUNTU EC2 VM AND PUBLIC WEB DEPLOYMENT
+============================================================
+SUB-EXERCISE 1 - CREATE MAVEN WEB PROJECT AND PUSH TO GITHUB
+Create Maven Web project in Eclipse and test locally.
+From project directory:
+git init
+git add .
+git commit -m "Add Maven web application"
+git branch -M main
+git remote add origin https://github.com/username/maven-web-java.git
+git push -u origin main
+
+SUB-EXERCISE 2 - CREATE UBUNTU EC2 INSTANCE
+1. AWS Console -> Services -> EC2 -> Launch Instance.
+2. Name: ubuntu.
+3. Select Ubuntu Server AMI, 64-bit.
+4. Select eligible instance type such as t2.micro if available.
+5. Create/download key pair .pem and store safely.
+6. Security Group: allow SSH 22 from your IP; allow HTTP 80, HTTPS 443 and app port 6060 as required.
+7. Storage 8 GB -> Launch instance.
+8. Select instance -> Connect -> SSH client -> copy SSH command.
+
+SUB-EXERCISE 3 - CONNECT TO UBUNTU FROM POWERSHELL
+cd path\to\AWS
+ssh -i "keypair.pem" ubuntu@PUBLIC_IP
+
+SUB-EXERCISE 4 - INSTALL REQUIRED SOFTWARE ON UBUNTU
+sudo apt update
+sudo apt-get install docker.io -y
+sudo apt install git -y
+sudo apt install nano -y
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker ubuntu
+newgrp docker
+docker --version
+git --version
+
+SUB-EXERCISE 5 - CLONE PROJECT AND CREATE DOCKERFILE
+git clone https://github.com/username/maven-web-java.git
+cd maven-web-java
+nano Dockerfile
+
+For Maven project that builds a WAR, a suitable multi-stage Dockerfile is:
+FROM maven:3.9-eclipse-temurin-17 AS build
+WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
+FROM tomcat:9.0-jdk17
+COPY --from=build /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
+
+SUB-EXERCISE 6 - BUILD IMAGE AND RUN CONTAINER
+docker build -t maven-web-app .
+docker images
+docker run -d --name app-demo -p 6060:8080 maven-web-app
+docker ps
+docker logs app-demo
+
+SUB-EXERCISE 7 - ACCESS APPLICATION PUBLICLY
+1. Copy EC2 instance Public IPv4 address.
+2. Confirm Security Group inbound rule allows TCP port 6060 from your IP or required source.
+3. Open in browser:
+http://PUBLIC_IP:6060
+
+SUB-EXERCISE 8 - TROUBLESHOOTING / SCENARIO COMMANDS
+Ubuntu Apache install:
+sudo apt update
+sudo apt install apache2 -y
+sudo systemctl start apache2
+sudo systemctl enable apache2
+sudo systemctl status apache2
+Place index.html in /var/www/html/.
+Check web server logs:
+sudo tail -f /var/log/apache2/error.log
+Install Maven:
+sudo apt update
+sudo apt install maven -y
+mvn -version
+Check Docker:
+docker ps
+docker logs app-demo
+docker inspect app-demo
+Restart container:
+docker restart app-demo
+Check listening ports:
+sudo ss -tulpn
+For Tomcat WAR deployment, copy WAR to Tomcat webapps directory and open http://PUBLIC_IP:8080/war-name.
+If app works with curl but not browser, check EC2 Security Group inbound rule for application port.
+If public IP changes after stop/start, allocate and associate an Elastic IP.
+For private subnet outbound internet access, configure NAT Gateway or suitable VPC endpoints
+
+mvn clean package
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin REPO_URL
+
+git push -u origin main
+docker build -t myapp:v1 .
+docker login
+docker tag myapp:v1 USERNAME/myapp:v1
+docker push USERNAME/myapp:v1
+docker pull USERNAME/myapp:v1
+docker run -d -p 8082:8080 --name myapp-container USERNAME/myapp:v1
+
+
+Nginx and PostgreSQL
+File name: docker-compose.yml
+
+services:
+  web:
+    image: nginx:latest
+    container_name: web
+    ports:
+      - "8080:80"
+  db:
+    image: postgres:15
+    container_name: db
+    environment:
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: demo
+      POSTGRES_DB: demo_db
+Run:
+
+docker compose up -d
+docker compose ps
+Open: http://localhost:8080
+
+
+Add Redis and depends_on
+services:
+  web:
+    image: nginx:latest
+    container_name: web
+    ports:
+      - "8080:80"
+    depends_on:
+      - redis
+
+  db:
+    image: postgres:15
+    container_name: db
+    environment:
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: demo
+      POSTGRES_DB: demo_db
+
+  redis:
+    image: redis:alpine
+Run:
+
+docker compose up -d
+docker compose ps
+docker compose logs
+docker compose down
+
+services:
+  web:
+    image: nginx:latest
+    container_name: web
+    ports:
+      - "8080:80"
+    depends_on:
+      - redis
+    networks:
+      - app-net
+
+  db:
+    image: postgres:15
+    container_name: db
+    environment:
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: demo
+      POSTGRES_DB: demo_db
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - app-net
+
+  redis:
+    image: redis:alpine
+    networks:
+      - app-net
+
+networks:
+  app-net:
+
+volumes:
+  db-data:
+
+
+app.py
+
+from flask import Flaskapp = Flask(__name__)@app.route('/')def home():    return "Hello from Flask + Docker"if __name__ == '__main__':    app.run(host='0.0.0.0', port=5000)
+File 2: Dockerfile
+
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY app.py /app/
+
+RUN pip install flask
+
+CMD ["python", "app.py"]
+File 3: docker-compose.yml
+
+services:
+  web:
+    build: .
+    container_name: flask-web
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    container_name: db
+    environment:
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: demo
+      POSTGRES_DB: demo_db
+Run:
+
+docker compose up --build
+Open: http://localhost:5000
+
+After editing app.py:
+
+docker compose up --build
+
+
